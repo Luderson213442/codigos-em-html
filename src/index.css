@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-600 rounded-full hover:bg-indigo-500 transition-colors;
+}
+
+.dialog-overlay {
+  animation: growCircle 0.5s ease-out forwards;
+  transform-origin: bottom right;
+}
+
+@keyframes growCircle {
+  0% {
+    clip-path: circle(0% at calc(100% - 2.5rem) calc(100% - 2.5rem));
+  }
+  100% {
+    clip-path: circle(150% at calc(100% - 2.5rem) calc(100% - 2.5rem));
+  }
+}
